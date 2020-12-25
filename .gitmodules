@@ -1,0 +1,15 @@
+[submodule "vendor/SDL"]
+	path = vendor/SDL
+	url = git@github.com:SDL-mirror/SDL.git
+[submodule "vendor/tinyxml2"]
+	path = vendor/tinyxml2
+	url = git@github.com:leethomason/tinyxml2.git
+[submodule "vendor/spdlog"]
+	path = vendor/spdlog
+	url = git@github.com:gabime/spdlog.git
+[submodule "vendor/zstr"]
+	path = vendor/zstr
+	url = https://github.com/mateidavid/zstr
+[submodule "vendor/zlib"]
+	path = vendor/zlib
+	url = git@github.com:madler/zlib.git
