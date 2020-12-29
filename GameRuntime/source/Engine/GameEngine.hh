@@ -1,5 +1,4 @@
 #pragma once
-#include "Core/Logging.hh"
 #include "Display/Window.hh"
 #include "Display/Texture.hh"
 #include "Audio/AudioManager.hh"

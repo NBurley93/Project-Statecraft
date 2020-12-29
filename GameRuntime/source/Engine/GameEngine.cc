@@ -1,7 +1,7 @@
 #include "GameEngine.hh"
 #include <tinyxml2.h>
 #include <pch.hh>
-#include "Display/Bitmap.hh"
+#include <Bitmap.hh>
 
 using namespace tinyxml2;
 

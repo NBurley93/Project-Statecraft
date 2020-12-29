@@ -1,6 +1,9 @@
 #pragma once
 
 #include <cstdint>
+#include <vector>
+#include <string>
+#include <fstream>
 #include <SDL.h>
 
 
