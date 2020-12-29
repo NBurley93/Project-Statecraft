@@ -12,5 +12,15 @@ int main(int argc, char* argv[]) {
     GAME_INFO("Cleaning up...");
     delete engine;
     GAME_INFO("Shutdown complete.");
+
     return 0;
 }
+
+// #include "Engine/Display/Bitmap.hh"
+
+
+// int main(int argc, char* argv[]) {
+//     Bitmap *bm = LoadBitmap("game/textures/test.bitmap");
+//     delete bm;
+//     return 0;
+// }

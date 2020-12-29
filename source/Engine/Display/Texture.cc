@@ -56,6 +56,19 @@ bool Texture::LoadImage(SDL_Renderer& renderer, const std::string& filepath) {
     return true;
 }
 
+bool Texture::LoadFromSurface(SDL_Renderer& renderer, SDL_Surface* surface) {
+    mWidth = surface->w;
+    mHeight = surface->h;
+    mID = SDL_CreateTextureFromSurface(&renderer, surface);
+    if (mID == NULL) {
+        GAME_ERROR("Failed to convert surface to texture: {}", SDL_GetError());
+        return false;
+    }
+
+    GAME_INFO("Loaded image from surface");
+    return true;
+}
+
 
 Texture::Texture() {}
 

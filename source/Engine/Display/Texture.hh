@@ -8,6 +8,7 @@ public:
     ~Texture();
 
     bool LoadImage(SDL_Renderer& renderer, const std::string& filepath);
+    bool LoadFromSurface(SDL_Renderer& renderer, SDL_Surface* surface);
 
     inline const uint32_t Width() const { return mWidth; }
     inline const uint32_t Height() const { return mHeight; }

@@ -1,3 +1,4 @@
+# TODO: Convert this into a proper native program, along with all asset-creation tools
 import struct
 import os
 import sys

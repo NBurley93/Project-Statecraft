@@ -72,6 +72,7 @@ target_include_directories(game_runtime PRIVATE
     ${CMAKE_SOURCE_DIR}/vendor/tinyxml2
     ${CMAKE_SOURCE_DIR}/vendor/zlib
     ${CMAKE_SOURCE_DIR}/vendor/zstr/src
+    ${CMAKE_BINARY_DIR}/vendor/zlib
 )
 
 
