@@ -10,7 +10,6 @@
 struct Bitmap {
     char FILEID[6];
     std::uint32_t fileVersion;
-    char bitmapID[40];
     std::uint32_t width;
     std::uint32_t height;
     std::uint32_t crc;

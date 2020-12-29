@@ -1,7 +1,6 @@
 # TODO: Convert this into a proper native program, along with all asset-creation tools
 import struct
 import zlib
-import hashlib
 import sys
 import os
 from tqdm import tqdm
@@ -124,10 +123,7 @@ else:
         for k in sorted(processedChunks):
             pixels += processedChunks[k]
 
-        hashid = hashlib.sha1(rawPixelData).hexdigest()
-
         print('Bitmap-data: {} bytes of pixel data'.format(len(pixels)))
-        print('Bitmap-hashed with sha-1 id: {}'.format(hashid))
         fname = os.path.splitext(os.path.basename(fpath))[0]
 
         print('Compressing pixel-data')
@@ -139,7 +135,6 @@ else:
         with open(os.path.join('game/textures/', fname) + '.bitmap', 'wb') as fi:
             fi.write(b'BITMAP')
             fi.write(struct.pack('<I', 1))
-            fi.write(hashid.encode())
             fi.write(struct.pack('<I', im.width))
             fi.write(struct.pack('<I', im.height))
             fi.write(struct.pack('<I', cpxlcrc))

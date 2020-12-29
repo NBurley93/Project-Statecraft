@@ -11,7 +11,6 @@ Bitmap* LoadBitmap(const std::string& filepath) {
     if (!fs.fail()) {
         fs.read(&bm->FILEID[0], 6);
         fs.read(reinterpret_cast<char*>(&bm->fileVersion), 4);
-        fs.read(&bm->bitmapID[0], 40);
         fs.read(reinterpret_cast<char*>(&bm->width), 4);
         fs.read(reinterpret_cast<char*>(&bm->height), 4);
         fs.read(reinterpret_cast<char*>(&bm->crc), 4);
@@ -51,9 +50,7 @@ Bitmap* LoadBitmap(const std::string& filepath) {
             crc32_dst = crc32(crc32_dst, (Bytef*)pixelData, (uInt)uncompressedSize);
             if (crc32_dst != bm->crc) {
                 GAME_WARN("Checksum: MISMATCH");
-                GAME_WARN("File Crc32: {}, Data Crc32: {}", bm->crc, crc32_dst);
-            } else {
-                GAME_TRACE("Checksum: MATCH");
+                GAME_WARN("Ref Crc32: {}, Result Crc32: {}", bm->crc, crc32_dst);
             }
             delete[] compressedData;
             
